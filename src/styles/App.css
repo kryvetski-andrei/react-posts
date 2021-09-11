@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  src: local("Oxygen"), url(../fonts/Oxygen/Oxygen-Regular.ttf) format("ttf");
+}
+
+body {
+  background-color: #252c33;
+  color: white;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid gray;
+  color: white;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  width: 800px;
+}
+
+.post {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 0px 4px 4px 4px;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.post .post__btns {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.post .post__btns > button {
+  min-width: 120px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.post .post__btns > button:hover {
+  background: white;
+  color: #252c33;
+  border-color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=App.css.map */

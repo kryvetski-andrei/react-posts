@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  src: local('Oxygen'), url(../fonts/Oxygen/Oxygen-Regular.ttf) format('ttf');
+}
+
+body {
+  background-color: rgb(37, 44, 51);
+  color: white;
+  
+};
+
+button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid gray;
+  color: white;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  width: 800px;
+}
+
+.post {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0px 4px 4px 4px;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+
+  .post__btns {
+    align-self: flex-end;
+  }
+  .post__btns > button {
+    min-width: 120px;
+    padding: 10px;
+    border-radius: 4px;
+
+    &:hover {
+      background: white;
+      color:rgb(37, 44, 51);
+      border-color: white;
+      cursor: pointer;
+    }
+  }  
+}
