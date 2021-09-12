@@ -38,6 +38,12 @@ body {
   width: 800px;
 }
 
+.no-post-placeholder {
+  text-align: center;
+  font-size: 48px;
+  color: #CDD9DB1A;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
