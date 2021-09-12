@@ -1,32 +1,37 @@
 import React, { useState, useMemo } from "react";
+import PostFilter from "./components/PostFilter";
 import PostForm from "./components/PostForm";
 import PostList from "./components/PostList";
-import MyInput from "./components/UI/input/MyInput";
-import MySelect from "./components/UI/select/MySelect";
 import "./styles/App.css"
 
 function App() {
   const [posts, setPosts] = useState([
-    {id: 1, title: 'Bob', body: 'd'},
-    {id: 2, title: 'Alfa', body: 'c'},
-    {id: 3, title: 'Ded', body: 'a'}
+    {
+      id: 1,
+      title: 'Behind the Texas Abortion Law, a Persevering Conservative Lawyer', 
+      body: 'A onetime Supreme Court clerk, Jonathan Mitchell spent years honing a legal approach that has flummoxed the courts and enraged abortion rights supporters. He is only now emerging as a pivotal player in one of the most high-profile examples yet of the erosion of the right to abortion.'
+    },
+    {
+      id: 2,
+      title: 'Coronavirus Updates',
+      body: 'Israel threatens to charge scores who returned from a Ukraine pilgrimage using faked coronavirus test results. West Virginia, once a vaccination pacesetter, is struggling against the Delta variant. Barred from flying, an Alaska lawmaker who rejects ‘mask tyranny’ asks to be excused from the State Senate.'
+    },
   ])
 
-  const [selectedSort, setSelectedSort] = useState('')
-  const [searchQuery, setSearchQuery] = useState('')
+  const [filter, setFilter] = useState({sort: '', query: ''})
 
   const sortedPosts = useMemo(() => {
     console.log('ОТРАБОТАЛА')
-    if (selectedSort) {
-      return [...posts].sort((a, b) => a[selectedSort].localeCompare(b[selectedSort]))
+    if (filter.sort) {
+      return [...posts].sort((a, b) => a[filter.sort].localeCompare(b[filter.sort]))
     }
     return posts;
 
-  }, [selectedSort, posts]);
+  }, [filter.sort, posts]);
 
   const sortedAndSearchedPosts = useMemo(() => {
-    return sortedPosts.filter(post => post.title.toLowerCase().includes(searchQuery))
-  }, [searchQuery, sortedPosts])
+    return sortedPosts.filter(post => post.title.toLowerCase().includes(filter.query) || post.body.toLowerCase().includes(filter.query))
+  }, [filter.query, sortedPosts])
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost])
@@ -34,10 +39,6 @@ function App() {
 
   const removePost = (post) => {
     setPosts(posts.filter(p => p.id !== post.id))
-  }
-
-  const sortPosts = (sort) => {
-    setSelectedSort(sort)
   }
 
   return (
@@ -48,24 +49,13 @@ function App() {
 
       <hr style={{margin: "10px 0", height: "1px", border: "none", backgroundColor: "#CDD9DB1A"}}/>
 
-      <MyInput
-        value={searchQuery}
-        onChange={event => setSearchQuery(event.target.value)}
-        placeholder="search..."
-      />
-
-      <MySelect 
-        value = {selectedSort}
-        onChange = {sortPosts}
-        defaultValue="Сортировка по:"
-        options = {[
-          {value: 'title', name: 'По названию'},
-          {value: 'body', name: 'По описанию'},
-        ]}  
+      <PostFilter 
+        filter={filter}
+        setFilter={setFilter}
       />
 
       {sortedAndSearchedPosts.length !== 0
-        ? <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Post List JS"/>
+        ? <PostList remove={removePost} posts={sortedAndSearchedPosts} title="POST LIST"/>
         : <div className="no-post-placeholder">NO POSTS HERE :(</div>
       } 
     </div>

@@ -16,6 +16,10 @@ input {
   border: 1px solid #CDD9DB1A;
 }
 
+select {
+  outline: none;
+}
+
 body {
   background-color: #22272E;
   color: #FFFFFF;
@@ -73,5 +77,11 @@ form {
 .post .post__btns {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.search-and-filter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=App.css.map */
