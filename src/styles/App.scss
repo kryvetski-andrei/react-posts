@@ -23,10 +23,12 @@ body {
 
 .App {
   width: 800px;
+}
+
+form {
   display: flex;
   flex-direction: column;
 }
-
 .post {
   padding: 10px;
   display: flex;
