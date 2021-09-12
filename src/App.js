@@ -11,19 +11,14 @@ function App() {
     {id: 3, title: 'JavaScript 3', body: 'Description'}
   ])
 
-  const [title, setTitle] = useState('')
-  const [body, setBody] = useState('')
+  const [post, setPost] = useState({title: '', body: ''})
+
 
   const addNewPost = (event) => {
     event.preventDefault()
 
-    const newPost = {
-      id: Date.now(),
-      title,
-      body
-    }
-
-    setPosts([...posts, newPost])
+    setPosts([...posts, {...post, id: Date.now()}])
+    setPost({title: '', body: ''})
   }
 
   return (
@@ -31,15 +26,15 @@ function App() {
       <form>
         <MyInput 
           type="text"
-          value={title} 
+          value={post.title} 
           placeholder="Название поста"
-          onChange = {event => setTitle(event.target.value)}
+          onChange = {event => setPost({...post, title: event.target.value})}
         />
         <MyInput         
           type="text"
-          value={body}  
+          value={post.body}  
           placeholder="Содержимое поста"
-          onChange = {event => setBody(event.target.value)}
+          onChange = {event => setPost({...post, body: event.target.value})}
         />
         <MyButton onClick={addNewPost} style={{backgroundColor: "#347D39", color: "#FFFFFF"}}>Создать пост</MyButton>
       </form>
