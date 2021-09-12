@@ -11,14 +11,8 @@
 }
 
 body {
-  background-color: #252c33;
-  color: white;
-}
-
-button {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1.5px solid gray;
-  color: white;
+  background-color: #22272E;
+  color: #FFFFFF;
 }
 
 #root {
@@ -36,6 +30,13 @@ button {
 
 .App {
   width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .post {
@@ -50,25 +51,12 @@ button {
       -ms-flex-align: start;
           align-items: flex-start;
   border-radius: 0px 4px 4px 4px;
-  border: 1px solid gray;
+  border: 1px solid #CDD9DB1A;
   margin-bottom: 10px;
 }
 
 .post .post__btns {
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-.post .post__btns > button {
-  min-width: 120px;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.post .post__btns > button:hover {
-  background: white;
-  color: #252c33;
-  border-color: white;
-  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */

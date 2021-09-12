@@ -10,16 +10,9 @@
 }
 
 body {
-  background-color: rgb(37, 44, 51);
-  color: white;
-  
+  background-color: #22272E;
+  color: #FFFFFF;
 };
-
-button {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1.5px solid gray;
-  color: white;
-}
 
 #root {
   display: flex;
@@ -30,6 +23,8 @@ button {
 
 .App {
   width: 800px;
+  display: flex;
+  flex-direction: column;
 }
 
 .post {
@@ -38,22 +33,10 @@ button {
   justify-content: space-between;
   align-items: flex-start;
   border-radius: 0px 4px 4px 4px;
-  border: 1px solid gray;
+  border: 1px solid #CDD9DB1A;
   margin-bottom: 10px;
 
   .post__btns {
     align-self: flex-end;
-  }
-  .post__btns > button {
-    min-width: 120px;
-    padding: 10px;
-    border-radius: 4px;
-
-    &:hover {
-      background: white;
-      color:rgb(37, 44, 51);
-      border-color: white;
-      cursor: pointer;
-    }
   }  
 }

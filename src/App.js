@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import PostList from "./components/PostList";
 import MyButton from "./components/UI/button/MyButton";
+import MyInput from "./components/UI/input/MyInput";
 import "./styles/App.css"
 
 function App() {
@@ -18,7 +19,10 @@ function App() {
 
   return (
     <div className="App">
-      <MyButton disabled>Создать пост</MyButton>
+      <MyInput type="text" placeholder="Название поста"/>
+      <MyInput type="text" placeholder="Содержимое поста"/>
+      <MyButton disabled style={{backgroundColor: "#347D39", color: "#FFFFFF"}}>Создать пост</MyButton>
+
       <PostList posts={posts} title="Post List JS"/>
       <PostList posts={posts2} title="Post List NodeJS"/>
     </div>
