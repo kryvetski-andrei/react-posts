@@ -10,6 +10,12 @@
   src: local("Oxygen"), url(../fonts/Oxygen/Oxygen-Regular.ttf) format("ttf");
 }
 
+input {
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #CDD9DB1A;
+}
+
 body {
   background-color: #22272E;
   color: #FFFFFF;
