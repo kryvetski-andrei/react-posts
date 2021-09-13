@@ -65,3 +65,19 @@ form {
 .search-and-filter-container {
   display: flex;
 }
+
+.post-enter {
+  background-color: #00fc080b;
+}
+.post-enter-active {
+  background-color: transparent;
+  transition: background-color 400ms ease-in;
+}
+.post-exit {
+  background-color: #8000001c;
+}
+.post-exit-active {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+
