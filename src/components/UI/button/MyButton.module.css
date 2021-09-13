@@ -14,4 +14,10 @@
   border-color: #CDD9DB;
   cursor: pointer;
 }
+
+.btnSet {
+  background-color: #347D39;
+  color: #FFFFFF;
+  font-weight: 600;
+}
 /*# sourceMappingURL=MyButton.module.css.map */

@@ -34,7 +34,7 @@ const PostForm = ({create}) => {
         onChange = {event => setPost({...post, body: event.target.value})}
       />
 
-      <MyButton onClick={addNewPost} style={{backgroundColor: "#347D39", color: "#FFFFFF", fontWeight: "600"}}>Создать пост</MyButton>
+      <MyButton onClick={addNewPost} style={{backgroundColor: "#347D39", color: "#FFFFFF", fontWeight: "600"}}>Добавить пост</MyButton>
 
     </form>
   )
