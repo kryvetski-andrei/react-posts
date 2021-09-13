@@ -46,6 +46,9 @@ body {
   text-align: center;
   font-size: 48px;
   color: #CDD9DB1A;
+  width: 100%;
+  height: 200px;
+  padding: 65px;
 }
 
 form {

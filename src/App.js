@@ -53,11 +53,8 @@ function App() {
         filter={filter}
         setFilter={setFilter}
       />
-
-      {sortedAndSearchedPosts.length !== 0
-        ? <PostList remove={removePost} posts={sortedAndSearchedPosts} title="POST LIST"/>
-        : <div className="no-post-placeholder">NO POSTS HERE :(</div>
-      } 
+      
+      <PostList remove={removePost} posts={sortedAndSearchedPosts} title="POST LIST"/>
     </div>
     
   )
