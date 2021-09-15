@@ -96,6 +96,9 @@ form {
 }
 
 .post .post__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }

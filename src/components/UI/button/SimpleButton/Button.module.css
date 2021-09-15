@@ -7,6 +7,7 @@
   max-width: 140px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-left: 10px;
 }
 
 .myBtn:hover {
