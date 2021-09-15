@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PostFilter from "./components/PostFilter";
 import PostForm from "./components/PostForm";
 import PostList from "./components/PostList";
@@ -9,22 +9,15 @@ import axios from "axios";
 import "./styles/App.css"
 
 function App() {
-  const [posts, setPosts] = useState([
-    {
-      id: 1,
-      title: 'Behind the Texas Abortion Law, a Persevering Conservative Lawyer', 
-      body: 'A onetime Supreme Court clerk, Jonathan Mitchell spent years honing a legal approach that has flummoxed the courts and enraged abortion rights supporters. He is only now emerging as a pivotal player in one of the most high-profile examples yet of the erosion of the right to abortion.'
-    },
-    {
-      id: 2,
-      title: 'Coronavirus Updates',
-      body: 'Israel threatens to charge scores who returned from a Ukraine pilgrimage using faked coronavirus test results. West Virginia, once a vaccination pacesetter, is struggling against the Delta variant. Barred from flying, an Alaska lawmaker who rejects ‘mask tyranny’ asks to be excused from the State Senate.'
-    },
-  ])
+  const [posts, setPosts] = useState([])
 
   const [filter, setFilter] = useState({sort: '', query: ''});
   const [modal, setModal] = useState(false);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
+
+  useEffect(()=> {
+    fetchPosts()
+  }, [])
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost])
