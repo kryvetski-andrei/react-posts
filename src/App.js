@@ -5,6 +5,7 @@ import PostList from "./components/PostList";
 import MyButton from "./components/UI/button/MyButton";
 import MyModal from "./components/UI/modal/MyModal";
 import { usePosts } from "./components/hooks/usePosts";
+import axios from "axios";
 import "./styles/App.css"
 
 function App() {
@@ -34,10 +35,16 @@ function App() {
     setPosts(posts.filter(p => p.id !== post.id))
   }
 
+  async function fetchPosts() {
+    const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
+    setPosts(response.data)
+  }
+
   return (
     
 
     <div className="App">
+      <button onClick={fetchPosts}>Get posts</button>
       <MyButton style={{backgroundColor: "#347D39", color: "#FFFFFF", fontWeight: "600"}} onClick={() => setModal(true)}>Создать пост</MyButton> 
       <MyModal visible={modal} setVisible={setModal}>
         <PostForm create={createPost}/>
