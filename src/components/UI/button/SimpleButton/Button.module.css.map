@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,SAAS;EAClB,KAAK,EAAE,OAAO;EACd,MAAM,EAAE,mBAAmB;EAC3B,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,OAAO;EACnB,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,QAAQ;CAOrB;;AAdD,AASE,MATI,AASH,MAAM,CAAC;EACN,UAAU,EAAE,OAAO;EACnB,YAAY,EAAG,OAAO;EACtB,MAAM,EAAE,OAAO;CAChB;;AAGH,AAAA,OAAO,CAAC;EACN,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,GAAG;CACjB",
     "sources": [
-        "MyButton.module.scss"
+        "Button.module.scss"
     ],
     "names": [],
-    "file": "MyButton.module.css"
+    "file": "Button.module.css"
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import MyButton from "./UI/button/MyButton";
+import MyButton from "./UI/button/SimpleButton/Button";
 
 const PostItem = (props) => {
 
@@ -7,7 +7,7 @@ const PostItem = (props) => {
     <div className="post">
       
       <div className="post__content">
-        <h4>{props.number}. {props.post.title}</h4>
+        <h4>{props.post.id}. {props.post.title}</h4>
         <p style={{margin: "10px 10px 0px 25px"}}>
           {props.post.body}
         </p>
