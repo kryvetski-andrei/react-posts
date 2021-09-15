@@ -9,6 +9,20 @@
   src: local('Oxygen'), url(../fonts/Oxygen/Oxygen-Regular.ttf) format('ttf');
 }
 
+li {
+  list-style-type: none;
+  
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 input {
   outline: none;
   border-radius: 4px;
@@ -26,6 +40,7 @@ body {
 
 #root {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -81,4 +96,35 @@ form {
   opacity: 0;
   transition: opacity 100ms ease-in;
 }
+
+.nav-bar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d333b;
+  
+  .nav-bar__list {
+    width: 800px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+
+     .nav-bar__item {
+       margin-right: 10px;
+      .nav-bar__link {
+        color: #ABBAC7;
+        font-weight: 700;
+        &:hover {
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+ 
+}
+
 
